@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://polito.it'>Polytechnique University of Turin</a>
+subtitle: <a href='https://www.polito.it/'>Polytechnique University of Turin</a>
 
 profile:
   align: right
