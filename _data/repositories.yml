@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - lambdavi
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - lambdavi/path_planning_drl
+  - lambdavi/panda-control-rl
+  - lambdavi/SatDrive-SegFL
+  - lambdavi/SpanLuke
