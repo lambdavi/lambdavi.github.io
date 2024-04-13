@@ -7,12 +7,7 @@ subtitle: Student Researcher in AI and Robotics
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Turin, Italy</p>
-    <p>daviibuoso@gmail.com</p>
-    <p>davide.buoso@studenti.polito.it</p>
-    <p>dbuoso@robots.ox.ac.uk</p>
+  image_circular: true # crops the image to make it circular
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

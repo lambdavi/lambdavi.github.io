@@ -13,3 +13,10 @@ nav_order: 1
 {% bibliography %}
 
 </div>
+
+---
+<div class="unoff_publications">
+
+{% bibliography %}
+
+</div>
