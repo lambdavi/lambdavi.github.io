@@ -20,10 +20,11 @@ Let's skip to the fun part.
 I am deeply passionate about <b>Robotics</b>, specifically in combination with <b>AI</b>.
 My <b>dream would be pursuing a PhD in Robotics</b> (in Locomotion/Manipulation).
 The full list of my <b>interests</b> is:
-- Reinforcement/Imitation Learning applied to Locomotion/Manipulation
--  Meta-RL
-- LLM/VLM applied to Robotics reasoning/perception
-- Skill Discovery
+- Acquisition and aggregation of skills
+- Robotic control through Reinforcement Learning (RL)
+- Meta-RL
+- Locomotion, Manipulation and Loco-Manipulation.
+- Application of generative models (LLM/VLM/Diffusion) to perception, planning, and reasoning
+- Multi-agent RL
 
-And in my free time?
-HAHAHAHA.
+And in my free time? .
