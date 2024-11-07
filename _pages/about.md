@@ -25,3 +25,6 @@ The full list of my <b>interests</b> is:
 - Application of generative models (LLM/VLM/Diffusion) to perception, planning, and reasoning
 
 And in my free time? .
+
+
+Collaborations: < name >.< surname >@polito.it
