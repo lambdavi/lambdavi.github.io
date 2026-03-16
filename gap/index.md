@@ -1,7 +1,7 @@
 ---
 title: Example Project
 layout: page
-permalink: /exampleproj/
+permalink: /gap/
 ---
 
 # Example Project
