@@ -74,7 +74,7 @@
         {%- if forloop.length > 1 -%}
           {%- unless forloop.first -%}
             {%- if forloop.last and author_array_limit == author_array_size -%}
-              and&nbsp;
+              &nbsp;and&nbsp;
             {%- else -%}
               ,&nbsp;
             {%- endif -%}
@@ -153,8 +153,13 @@
       {% capture entryyear %}{{ " " }}{{entry.year}}{% endcapture %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
+    {% assign important_conference = entry.important_conference | default: '' | downcase | strip %}
+    {% assign periodical_class = 'periodical' %}
+    {% if important_conference == 'true' %}
+      {% assign periodical_class = periodical_class | append: ' periodical-important' %}
+    {% endif %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
-    <div class="periodical">
+    <div class="{{ periodical_class }}">
       {{ periodical | strip }}
     </div>
     <div class="periodical">

@@ -729,6 +729,10 @@ footer.sticky-bottom {
 
       .periodical {
         font-weight: bold;
+
+        &.periodical-important {
+          color: #0b2f6b;
+        }
       }
 
       .author {
