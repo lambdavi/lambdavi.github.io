@@ -13,36 +13,36 @@ permalink: /s2p/
     <meta property="og:description" content="https://lambdavi.github.io/s2p/" />
     <meta property="og:url" content="https://lambdavi.github.io/s2p/" />
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-    <meta property="og:image" content="static/image/new_teaser.png" />
+    <meta property="og:image" content="{{ '/paper_pages/s2p/static/images/new_teaser.png' | absolute_url }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
     <meta name="twitter:title" content="Select2Plan: Training-Free ICL-Based Planning through VQA and Memory Retrieval" />
     <meta name="twitter:description" content="https://lambdavi.github.io/s2p/" />
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-    <meta name="twitter:image" content="static/images/new_teaser.png" />
+    <meta name="twitter:image" content="{{ '/paper_pages/s2p/static/images/new_teaser.png' | absolute_url }}" />
     <meta name="twitter:card" content="summary_large_image" />
     <!-- Keywords for your paper to be indexed by-->
     <meta name="keywords" content="select2plan vlm navigation" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Select2Plan: Training-Free ICL-Based Planning through VQA and Memory Retrieval</title>
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ '/paper_pages/s2p/static/images/favicon.ico' | relative_url }}" />
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
 
-    <link rel="stylesheet" href="static/css/bulma.min.css" />
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="{{ '/paper_pages/s2p/static/css/bulma.min.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/paper_pages/s2p/static/css/bulma-carousel.min.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/paper_pages/s2p/static/css/bulma-slider.min.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/paper_pages/s2p/static/css/fontawesome.all.min.css' | relative_url }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
-    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" href="{{ '/paper_pages/s2p/static/css/index.css' | relative_url }}" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-    <script defer src="static/js/fontawesome.all.min.js"></script>
-    <script src="static/js/bulma-carousel.min.js"></script>
-    <script src="static/js/bulma-slider.min.js"></script>
-    <script src="static/js/index.js"></script>
+    <script defer src="{{ '/paper_pages/s2p/static/js/fontawesome.all.min.js' | relative_url }}"></script>
+    <script src="{{ '/paper_pages/s2p/static/js/bulma-carousel.min.js' | relative_url }}"></script>
+    <script src="{{ '/paper_pages/s2p/static/js/bulma-slider.min.js' | relative_url }}"></script>
+    <script src="{{ '/paper_pages/s2p/static/js/index.js' | relative_url }}"></script>
   </head>
   <body>
     <section class="hero">
@@ -90,7 +90,7 @@ permalink: /s2p/
 
                   <!-- Supplementary PDF link 
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="{{ '/paper_pages/s2p/static/pdfs/supplementary_material.pdf' | relative_url }}" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -136,7 +136,7 @@ permalink: /s2p/
       <div class="container is-max-desktop">
         <div class="hero-body">
           <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
-            <img src="static/images/new_teaser.png" alt="" style="max-width: 1024px; margin: auto; margin-bottom: 16px" />
+            <img src="{{ '/paper_pages/s2p/static/images/new_teaser.png' | relative_url }}" alt="" style="max-width: 1024px; margin: auto; margin-bottom: 16px" />
           </figure>
           <h2 class="subtitle has-text-centered">
             We propose the Select2Plan framework, a training-free approach that can be applied in either Third-Person View (TPV) or First Person View
@@ -230,7 +230,7 @@ permalink: /s2p/
           </p>
           <!--
       <figure class="image" style="margin-top: 32px; margin-bottom: 32px;">
-        <img src="static/images/what_can_we_learn.png" alt="" style="max-width: 768px; margin: auto;" />
+        <img src="{{ '/paper_pages/s2p/static/images/what_can_we_learn.png' | relative_url }}" alt="" style="max-width: 768px; margin: auto;" />
       </figure>
       -->
           <br />
@@ -241,7 +241,7 @@ permalink: /s2p/
             CCTV-based robotic control.<br />
           </p>
           <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
-            <img src="static/images/model_arch.png" alt="" style="margin: auto" />
+            <img src="{{ '/paper_pages/s2p/static/images/model_arch.png' | relative_url }}" alt="" style="margin: auto" />
           </figure>
 
           <p>
@@ -268,7 +268,7 @@ permalink: /s2p/
             highlighting the efficiency of our approach in leveraging pre-trained Vision-Language Models (VLMs) for efficient knowledge transfer.
           </p>
           <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
-            <img src="static/images/table1.png" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px" />
+            <img src="{{ '/paper_pages/s2p/static/images/table1.png' | relative_url }}" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px" />
           </figure>
 
           <h3 class="title is-3">Results in TPV scenario</h3>
@@ -279,7 +279,7 @@ permalink: /s2p/
             demonstrators and finally, different scenario and different robotic support (online data).
           </p>
           <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
-            <img src="static/images/context_v3.png" alt="" style="max-width: 768px; margin: auto" />
+            <img src="{{ '/paper_pages/s2p/static/images/context_v3.png' | relative_url }}" alt="" style="max-width: 768px; margin: auto" />
           </figure>
           <h4 class="title is-4">Actual results</h4>
 
@@ -294,7 +294,7 @@ permalink: /s2p/
             ability to generalize cross embodiement using as instance demos of other robots or humans walking.
           </p>
           <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
-            <img src="static/images/table2.png" alt="" style="max-width: 420px; margin: auto; margin-bottom: 16px" />
+            <img src="{{ '/paper_pages/s2p/static/images/table2.png' | relative_url }}" alt="" style="max-width: 420px; margin: auto; margin-bottom: 16px" />
           </figure>
 
           <!--
@@ -313,7 +313,7 @@ permalink: /s2p/
           </div>
           <div class="column is-half">
             <figure class="image" style="margin-top: 32px; margin-bottom: 32px;">
-              <img src="static/images/egopack.png" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
+              <img src="{{ '/paper_pages/s2p/static/images/egopack.png' | relative_url }}" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
             </figure>
           </div>
           <div class="column is-half">
@@ -340,7 +340,7 @@ permalink: /s2p/
           </div>
             <div class="column is-half">
               <figure class="image" style="margin-top: 32px; margin-bottom: 32px;">
-                <img src="static/images/fusion.png" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
+                <img src="{{ '/paper_pages/s2p/static/images/fusion.png' | relative_url }}" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
               </figure>
             </div>
         </div>
@@ -355,7 +355,7 @@ permalink: /s2p/
       <h3 class="title is-3">Experimental results</h3>
       <p>We validate EgoPack on Action Recognition (AR), Object State Change Classification (OSCC), Point of No Return (PNR) and Long Term Anticipation (LTA) from Ego4D.</p>
       <figure class="image" style="margin-top: 32px; margin-bottom: 32px;">
-        <img src="static/images/results_val.png" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
+        <img src="{{ '/paper_pages/s2p/static/images/results_val.png' | relative_url }}" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
       </figure>
       <div class="columns is-vcentered is-flex-center is-multiline">
         <div class="column is-half">
@@ -368,12 +368,12 @@ permalink: /s2p/
         </div>
         <div class="column is-half">
           <figure class="image" style="margin-top: 32px; margin-bottom: 32px;">
-            <img src="static/images/viz_agreement.png" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
+            <img src="{{ '/paper_pages/s2p/static/images/viz_agreement.png' | relative_url }}" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
           </figure>
         </div>
         <div class="column is-half">
           <figure class="image" style="margin-top: 32px; margin-bottom: 32px;">
-            <img src="static/images/queries.png" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
+            <img src="{{ '/paper_pages/s2p/static/images/queries.png' | relative_url }}" alt="" style="max-width: 768px; margin: auto; margin-bottom: 16px;" />
           </figure>
         </div>
         <div class="column is-half">
