@@ -730,8 +730,10 @@ footer.sticky-bottom {
       .periodical {
         font-weight: bold;
 
-        &.periodical-important {
-          color: #0b2f6b;
+        &.periodical-important,
+        &.periodical-important em,
+        &.periodical-important a {
+          color: #0b2f6b !important;
         }
       }
 

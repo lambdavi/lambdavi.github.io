@@ -153,7 +153,13 @@
       {% capture entryyear %}{{ " " }}{{entry.year}}{% endcapture %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% assign important_conference = entry.important_conference | default: '' | downcase | strip %}
+    {% assign important_conference = entry.important_conference | default: entry.importantconference | default: '' | append: '' | downcase | strip %}
+    {% if important_conference == '' and entry.bibtex %}
+      {% assign raw_bibtex = entry.bibtex | downcase %}
+      {% if raw_bibtex contains 'important_conference={true}' or raw_bibtex contains 'important_conference = {true}' or raw_bibtex contains 'important_conference=true' or raw_bibtex contains 'important_conference = true' or raw_bibtex contains 'important_conference={"true"}' or raw_bibtex contains 'important_conference = {"true"}' %}
+        {% assign important_conference = 'true' %}
+      {% endif %}
+    {% endif %}
     {% assign periodical_class = 'periodical' %}
     {% if important_conference == 'true' %}
       {% assign periodical_class = periodical_class | append: ' periodical-important' %}
