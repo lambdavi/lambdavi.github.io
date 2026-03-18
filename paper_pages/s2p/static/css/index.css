@@ -2,6 +2,54 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+.back-home-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f2937;
+  font-family: "Google Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.back-home-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  background: #fff;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.back-home-button:focus-visible {
+  outline: 3px solid rgba(66, 133, 244, 0.45);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .back-home-button {
+    top: 0.65rem;
+    left: 0.65rem;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
 .footer .icon-link {
   font-size: 25px;
   color: #000;
