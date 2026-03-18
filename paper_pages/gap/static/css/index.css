@@ -7,6 +7,52 @@ body {
   color: #000;
 }
 
+.back-home-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.88);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.22);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.back-home-button:hover,
+.back-home-button:focus-visible {
+  background: rgba(17, 24, 39, 1);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.28);
+}
+
+.back-home-button .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .back-home-button {
+    top: 14px;
+    left: 14px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.82rem;
+  }
+}
+
 .link-block a {
   margin-top: 5px;
   margin-bottom: 5px;
