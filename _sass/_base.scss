@@ -737,6 +737,16 @@ footer.sticky-bottom {
         }
       }
 
+      html[data-theme="dark"] & {
+        .periodical {
+          &.periodical-important,
+          &.periodical-important em,
+          &.periodical-important a {
+            color: #5eb3f6 !important;
+          }
+        }
+      }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
