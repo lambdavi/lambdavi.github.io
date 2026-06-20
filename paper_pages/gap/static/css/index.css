@@ -8,33 +8,54 @@
   --gap-shadow: 0 8px 32px rgba(18, 58, 120, 0.08);
 }
 
-body,
-a,
-button,
-input,
-textarea,
-select,
-label,
-summary,
-[role="button"] {
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: #1f2937;
   cursor:
     url("/paper_pages/gap/static/images/crosshair_cursor.png") 16 16,
     auto;
 }
-
-a:hover,
-button:hover,
-[role="button"]:hover,
-.publication-links a:hover,
-.back-home-button:hover {
+a,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+label[for],
+summary,
+[role="button"],
+[href],
+.publication-links a,
+.back-home-button {
   cursor:
     url("/paper_pages/gap/static/images/crosshair_cursor.png") 16 16,
     pointer;
 }
 
-body {
-  font-family: "Noto Sans", sans-serif;
-  color: #1f2937;
+a:hover,
+a:focus-visible,
+button:hover,
+button:focus-visible,
+input[type="submit"]:hover,
+input[type="submit"]:focus-visible,
+input[type="button"]:hover,
+input[type="button"]:focus-visible,
+input[type="reset"]:hover,
+input[type="reset"]:focus-visible,
+label[for]:hover,
+label[for]:focus-visible,
+summary:hover,
+summary:focus-visible,
+[role="button"]:hover,
+[role="button"]:focus-visible,
+[href]:hover,
+[href]:focus-visible,
+.publication-links a:hover,
+.publication-links a:focus-visible,
+.back-home-button:hover,
+.back-home-button:focus-visible {
+  cursor:
+    url("/paper_pages/gap/static/images/crosshair_open_cursor.png") 16 16,
+    pointer;
 }
 
 .footer .icon-link {
