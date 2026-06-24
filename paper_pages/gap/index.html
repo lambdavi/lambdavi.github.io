@@ -32,6 +32,7 @@ permalink: /gap/
     <link rel="stylesheet" href="/paper_pages/gap/static/css/fontawesome.all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
     <link rel="stylesheet" href="/paper_pages/gap/static/css/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
 
     <link rel="preload" href="/paper_pages/gap/static/images/crosshair_cursor.png" as="image" />
     <link rel="preload" href="/paper_pages/gap/static/images/crosshair_open_cursor.png" as="image" />
@@ -42,6 +43,13 @@ permalink: /gap/
     <script src="/paper_pages/gap/static/js/bulma-carousel.min.js"></script>
     <script src="/paper_pages/gap/static/js/bulma-slider.min.js"></script>
     <script defer src="/paper_pages/gap/static/js/index.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false});"
+    ></script>
   </head>
   <body>
     <a class="back-home-button" href="/" aria-label="Back to homepage">
@@ -246,22 +254,22 @@ permalink: /gap/
 
         <div class="method-grid">
           <div class="method-card">
-            <div class="method-card-title">Centroid Alignment (&#8467;<sub>center</sub>)</div>
-            <div class="method-card-formula">&#8467;<sub>center</sub> = &#8216;p&#772;<sub>t</sub> &minus; c<sub>t</sub>&#8216;<sub>2</sub><sup>2</sup></div>
+            <div class="method-card-title">Centroid Alignment ($\mathcal{L}_{center}$)</div>
+            <div class="method-card-formula">$$\mathcal{L}_{center} = \| \bar{p}_t - c_t \|_2^2$$</div>
             <div class="method-card-desc">
               Pulls the keypoint centroid onto the object mask centroid, grounding keypoints on task-relevant geometry rather than background distractors.
             </div>
           </div>
           <div class="method-card">
-            <div class="method-card-title">Geometric Spread (&#8467;<sub>spread</sub>)</div>
-            <div class="method-card-formula">&#8467;<sub>spread</sub> = &#8216;&sigma;<sub>p</sub> &minus; &sigma;<sub>target</sub>&#8216;<sub>2</sub><sup>2</sup></div>
+            <div class="method-card-title">Geometric Spread ($\mathcal{L}_{spread}$)</div>
+            <div class="method-card-formula">$$\mathcal{L}_{spread} = \| \sigma_p - \sigma_{target} \|_2^2$$</div>
             <div class="method-card-desc">
               Matches keypoint spatial variance to the object scale, preventing collapse to a single point and preserving orientation information.
             </div>
           </div>
           <div class="method-card">
-            <div class="method-card-title">Keypoint Diversity (&#8467;<sub>div</sub>)</div>
-            <div class="method-card-formula">&#8467;<sub>div</sub> = penalize pairs closer than &delta;<sub>min</sub></div>
+            <div class="method-card-title">Keypoint Diversity ($\mathcal{L}_{div}$)</div>
+            <div class="method-card-formula">$$\mathcal{L}_{div} = \frac{1}{K} \sum_{k=1}^K \left[ \max\left(0, \delta_{min} - \min_{j \neq k} \| p_{k,t} - p_{j,t} \|_2 \right) \right]^2$$</div>
             <div class="method-card-desc">
               Enforces minimum separation between keypoints, encouraging coverage of distinct geometric extremities across the object surface.
             </div>
@@ -284,7 +292,7 @@ permalink: /gap/
         <h2 class="title is-3 section-title">Transferable Geometric Anchors</h2>
 
         <div class="anchor-videos-layout">
-          <div class="anchor-video-proxy">
+          <div class="anchor-videos-row anchor-videos-row--pretrain">
             <figure class="anchor-video">
               <video
                 class="gap-autoplay-video"
@@ -302,7 +310,7 @@ permalink: /gap/
               </figcaption>
             </figure>
           </div>
-          <div class="anchor-videos-transfer">
+          <div class="anchor-videos-row anchor-videos-row--transfer">
             <figure class="anchor-video">
               <video
                 class="gap-autoplay-video"
