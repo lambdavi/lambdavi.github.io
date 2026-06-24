@@ -233,6 +233,69 @@ body {
   z-index: 1;
 }
 
+.video-placeholder--small {
+  aspect-ratio: 16 / 9;
+}
+
+.video-placeholder--small .video-placeholder-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 1.1rem;
+}
+
+.video-placeholder--small .video-placeholder-label {
+  font-size: 0.9rem;
+}
+
+.video-placeholder--small .video-placeholder-sub {
+  font-size: 0.75rem;
+}
+
+/* ── Hero / project video ── */
+.hero-video {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--gap-shadow);
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+}
+
+/* ── Transferable anchors video layout ── */
+.anchor-videos-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+.anchor-video-proxy {
+  min-width: 0;
+}
+
+.anchor-videos-transfer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .anchor-videos-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .anchor-videos-transfer {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Highlight stats ── */
 .stats-row {
   display: grid;

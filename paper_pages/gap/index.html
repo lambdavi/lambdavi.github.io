@@ -60,7 +60,7 @@ permalink: /gap/
               </h1>
 
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><a href="https://lambdavi.github.io" target="_blank">Davide Buoso</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="https://lambdavi.github.io" target="_blank">Davide Buoso</a>,</span>
                 <span class="author-block">Andrea Protopapa,</span>
                 <span class="author-block">Stefano Di Carlo,</span>
                 <span class="author-block">Francesca Pistilli,</span>
@@ -106,13 +106,13 @@ permalink: /gap/
       </div>
     </section>
 
-    <!-- Video placeholder -->
+    <!-- Project video -->
     <section class="section" style="padding-top: 0">
       <div class="container is-max-desktop">
-        <div class="video-placeholder" id="video-placeholder">
-          <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
-          <div class="video-placeholder-label">Video coming soon</div>
-          <div class="video-placeholder-sub">Project overview video will be embedded here</div>
+        <div class="hero-video">
+          <video controls playsinline preload="metadata" aria-label="GAP project overview video">
+            <source src="/paper_pages/gap/static/video/GAP_FINAL_VIDEO.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
@@ -121,9 +121,11 @@ permalink: /gap/
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
+          <!-- Teaser image
           <figure class="image paper-figure">
             <img src="/paper_pages/gap/static/images/teaser_gap.jpg" alt="GAP teaser: geometric anchor pre-training for few-shot visuomotor learning" />
           </figure>
+          --> 
           <h2 class="subtitle has-text-centered">
             GAP introduces a lightweight, action-free warm-up stage that regularizes the spatial pooling layer
             <em>before</em> downstream imitation learning — preventing bottleneck collapse and enabling data-efficient
@@ -183,6 +185,31 @@ permalink: /gap/
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Contributions -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title">Contributions</h2>
+        <ul class="contribution-list content">
+          <li>
+            We introduce <strong>GAP</strong>, an action-free pretraining strategy for spatial pooling layers that injects geometric
+            priors via a cheap mask-supervised proxy task, preventing bottleneck collapse in few-shot visuomotor IL.
+          </li>
+          <li>
+            We demonstrate strong empirical gains on RoboMimic and ManiSkill in extremely low-data regimes (15–50 demonstrations)
+            under domain and task shift.
+          </li>
+          <li>
+            We show that explicit geometric regularization is necessary — simply exposing the adapter to additional proxy data
+            is insufficient and can cause negative transfer.
+          </li>
+          <li>
+            We demonstrate that GAP learns transferable geometric anchors that improve robustness across tasks, visual domain
+            shifts, and simulation environments (pretrain on RoboMimic, transfer to ManiSkill).
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -246,6 +273,34 @@ permalink: /gap/
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <h2 class="title is-3 section-title">Transferable Geometric Anchors</h2>
+
+        <div class="anchor-videos-layout">
+          <div class="anchor-video-proxy">
+            <div class="video-placeholder video-placeholder--small">
+              <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
+              <div class="video-placeholder-label">Proxy task</div>
+              <div class="video-placeholder-sub"><code>LiftCube</code> (pre-training)</div>
+            </div>
+          </div>
+          <div class="anchor-videos-transfer">
+            <div class="video-placeholder video-placeholder--small">
+              <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
+              <div class="video-placeholder-label">Transfer 1</div>
+              <div class="video-placeholder-sub">RoboMimic task</div>
+            </div>
+            <div class="video-placeholder video-placeholder--small">
+              <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
+              <div class="video-placeholder-label">Transfer 2</div>
+              <div class="video-placeholder-sub">RoboMimic task</div>
+            </div>
+            <div class="video-placeholder video-placeholder--small">
+              <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
+              <div class="video-placeholder-label">Transfer 3</div>
+              <div class="video-placeholder-sub">ManiSkill task</div>
+            </div>
+          </div>
+        </div>
+
         <figure class="paper-figure">
           <img src="/paper_pages/gap/static/images/qualitative_hq.png" alt="Qualitative keypoint transfer across tasks and simulators" />
           <figcaption class="paper-figure-caption">
@@ -257,28 +312,18 @@ permalink: /gap/
       </div>
     </section>
 
-    <!-- Contributions -->
+    <!-- Real World -->
     <section class="section">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 section-title">Contributions</h2>
-        <ul class="contribution-list content">
-          <li>
-            We introduce <strong>GAP</strong>, an action-free pretraining strategy for spatial pooling layers that injects geometric
-            priors via a cheap mask-supervised proxy task, preventing bottleneck collapse in few-shot visuomotor IL.
-          </li>
-          <li>
-            We demonstrate strong empirical gains on RoboMimic and ManiSkill in extremely low-data regimes (15–50 demonstrations)
-            under domain and task shift.
-          </li>
-          <li>
-            We show that explicit geometric regularization is necessary — simply exposing the adapter to additional proxy data
-            is insufficient and can cause negative transfer.
-          </li>
-          <li>
-            We demonstrate that GAP learns transferable geometric anchors that improve robustness across tasks, visual domain
-            shifts, and simulation environments (pretrain on RoboMimic, transfer to ManiSkill).
-          </li>
-        </ul>
+        <h2 class="title is-3 section-title">Sim-to-Real Transfer</h2>
+        <figure class="paper-figure">
+          <img src="/paper_pages/gap/static/images/real_world.png" alt="GAP keypoints on real-world robot video" />
+          <figcaption class="paper-figure-caption">
+            <strong>GAP in the wild.</strong> Zero-shot application of the GAP-pretrained spatial pooler (trained on RoboMimic
+            <code>LiftCube</code>) to a real-world pick-and-place video. Keypoints maintain strong geometric initialization even
+            without any real-world policy training, suggesting promising sim-to-real transfer.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -397,115 +442,6 @@ permalink: /gap/
             <strong>GAP across backbones (Square, 30 demos).</strong> GAP consistently outperforms Global Avg. Pooling, unregularized
             Spatial Softmax, and AFA across R3M, DINOv2, and VC-1 backbones — confirming that geometric regularization is compatible
             with any frozen VFM.
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Ablations -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 section-title">Ablations</h2>
-
-        <h3 class="title is-4" style="margin-top: 1.5rem">Proxy Task Domain Transfer</h3>
-        <div class="content has-text-justified">
-          <p>
-            To verify that GAP learns general geometric priors rather than simulator-specific textures, we compare three pre-training
-            conditions on ManiSkill <code>StackCube</code>: Same Table (<code>PlaceSphere</code> on ManiSkill),
-            Cross Table (white-background variant), and Cross-Sim (<code>LiftCube</code> on RoboMimic). All three largely outperform
-            the VC-1+SS baseline, with no statistically significant difference among them.
-          </p>
-        </div>
-        <div class="table-wrapper">
-          <table class="gap-table compact">
-            <thead>
-              <tr>
-                <th>Pre-training Strategy</th>
-                <th>15 Demos</th>
-                <th>20 Demos</th>
-                <th>30 Demos</th>
-                <th>50 Demos</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>ResNet50 E-E</td><td>0.22</td><td>0.23</td><td>0.50</td><td>0.66</td></tr>
-              <tr><td>VC-1 + SS (No Pre-training)</td><td>0.04</td><td>0.08</td><td>0.28</td><td>0.63</td></tr>
-              <tr><td>AFA</td><td>0.09</td><td>0.14</td><td>0.25</td><td>0.44</td></tr>
-              <tr class="gap-row"><td>GAP (Same Table)</td><td class="best">0.36</td><td class="best">0.35</td><td>0.56</td><td class="best">0.80</td></tr>
-              <tr class="gap-row"><td>GAP (Cross Table)</td><td>0.28</td><td>0.31</td><td>0.54</td><td>0.74</td></tr>
-              <tr class="gap-row"><td>GAP (Cross-Sim)</td><td>0.19</td><td>0.24</td><td class="best">0.61</td><td class="best">0.80</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="tables-grid" style="margin-top: 2.5rem">
-          <div>
-            <h3 class="title is-4">Loss Component Ablation</h3>
-            <p class="content has-text-justified" style="font-size: 0.9rem">
-              Removing any individual loss term degrades downstream success on Square (30 demos), confirming that centroid alignment,
-              spread, and diversity synergistically regularize the bottleneck.
-            </p>
-            <div class="table-wrapper">
-              <table class="gap-table compact">
-                <thead>
-                  <tr>
-                    <th>&#8467;<sub>cen</sub></th>
-                    <th>&#8467;<sub>div</sub></th>
-                    <th>&#8467;<sub>spr</sub></th>
-                    <th>Success</th>
-                    <th>&Delta;</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="gap-row"><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td class="best">0.37</td><td>—</td></tr>
-                  <tr><td>&#10003;</td><td>&#10003;</td><td></td><td>0.24</td><td>&minus;0.13</td></tr>
-                  <tr><td>&#10003;</td><td></td><td>&#10003;</td><td>0.32</td><td>&minus;0.05</td></tr>
-                  <tr><td></td><td>&#10003;</td><td>&#10003;</td><td>0.26</td><td>&minus;0.11</td></tr>
-                  <tr><td>&#10003;</td><td></td><td></td><td>0.30</td><td>&minus;0.07</td></tr>
-                  <tr><td></td><td></td><td>&#10003;</td><td>0.26</td><td>&minus;0.11</td></tr>
-                  <tr><td></td><td>&#10003;</td><td></td><td>0.22</td><td>&minus;0.15</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="title is-4">Pretraining Objective Ablation</h3>
-            <p class="content has-text-justified" style="font-size: 0.9rem">
-              Pre-training the adapter with action-supervised imitation on the proxy task actively <em>degrades</em> downstream
-              performance. Only GAP's geometric objective yields substantial improvements (+14% over baseline).
-            </p>
-            <div class="table-wrapper">
-              <table class="gap-table compact">
-                <thead>
-                  <tr>
-                    <th>Pretraining Objective</th>
-                    <th>VC-1 + SS</th>
-                    <th>VC-1 + AFA</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Baseline (No Pretraining)</td><td>0.23</td><td>0.31</td></tr>
-                  <tr><td>+ Policy Training</td><td>0.19</td><td>0.27</td></tr>
-                  <tr class="gap-row"><td>+ GAP (Ours)</td><td class="best">0.37</td><td>—</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Real World -->
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 section-title">Sim-to-Real Transfer</h2>
-        <figure class="paper-figure">
-          <img src="/paper_pages/gap/static/images/real_world.png" alt="GAP keypoints on real-world robot video" />
-          <figcaption class="paper-figure-caption">
-            <strong>GAP in the wild.</strong> Zero-shot application of the GAP-pretrained spatial pooler (trained on RoboMimic
-            <code>LiftCube</code>) to a real-world pick-and-place video. Keypoints maintain strong geometric initialization even
-            without any real-world policy training, suggesting promising sim-to-real transfer.
           </figcaption>
         </figure>
       </div>
