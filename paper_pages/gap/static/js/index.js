@@ -31,24 +31,49 @@ window.HELP_IMPROVE_VIDEOJS = false;
 })();
 
 (function () {
-  const videos = document.querySelectorAll("video.gap-autoplay-video");
-  if (!videos.length) return;
+  function playVideo(video) {
+    video.muted = true;
+    video.playsInline = true;
+    video.loop = true;
+    return video.play().catch(() => {});
+  }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const video = entry.target;
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
+  function initAutoplayVideos() {
+    const videos = document.querySelectorAll("video.gap-autoplay-video");
+    if (!videos.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (entry.isIntersecting) {
+            playVideo(video);
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "80px 0px" }
+    );
+
+    videos.forEach((video) => {
+      observer.observe(video);
+
+      video.addEventListener("click", () => {
+        if (video.paused) {
+          playVideo(video);
         } else {
           video.pause();
         }
       });
-    },
-    { threshold: 0.35 }
-  );
+    });
+  }
 
-  videos.forEach((video) => observer.observe(video));
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAutoplayVideos);
+  } else {
+    initAutoplayVideos();
+  }
 })();
 
 $(document).ready(function () {
