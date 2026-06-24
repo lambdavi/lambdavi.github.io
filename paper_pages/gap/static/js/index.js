@@ -30,6 +30,27 @@ window.HELP_IMPROVE_VIDEOJS = false;
   });
 })();
 
+(function () {
+  const videos = document.querySelectorAll("video.gap-autoplay-video");
+  if (!videos.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  videos.forEach((video) => observer.observe(video));
+})();
+
 $(document).ready(function () {
   // Check for click events on the navbar burger icon
 

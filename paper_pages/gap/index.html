@@ -111,9 +111,12 @@ permalink: /gap/
       <div class="container is-max-desktop">
         <div class="hero-video">
           <video
+            class="gap-autoplay-video"
             controls
             playsinline
-            preload="metadata"
+            muted
+            loop
+            preload="auto"
             width="1920"
             height="1080"
             aria-label="GAP project overview video"
@@ -282,31 +285,71 @@ permalink: /gap/
 
         <div class="anchor-videos-layout">
           <div class="anchor-video-proxy">
-            <div class="video-placeholder video-placeholder--small">
-              <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
-              <div class="video-placeholder-label">Proxy task</div>
-              <div class="video-placeholder-sub"><code>LiftCube</code> (pre-training)</div>
-            </div>
+            <figure class="anchor-video">
+              <video
+                class="gap-autoplay-video"
+                playsinline
+                muted
+                loop
+                preload="auto"
+                aria-label="GAP proxy task: LiftCube pre-training"
+                src="/paper_pages/gap/static/video/pretr.mp4"
+              ></video>
+              <figcaption class="anchor-video-caption">
+                <div class="anchor-video-label">Proxy task</div>
+                <div class="anchor-video-sub"><code>LiftCube</code> (pre-training)</div>
+              </figcaption>
+            </figure>
           </div>
           <div class="anchor-videos-transfer">
-            <div class="video-placeholder video-placeholder--small">
-              <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
-              <div class="video-placeholder-label">Transfer 1</div>
-              <div class="video-placeholder-sub">RoboMimic task</div>
-            </div>
-            <div class="video-placeholder video-placeholder--small">
-              <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
-              <div class="video-placeholder-label">Transfer 2</div>
-              <div class="video-placeholder-sub">RoboMimic task</div>
-            </div>
-            <div class="video-placeholder video-placeholder--small">
-              <div class="video-placeholder-icon"><i class="fas fa-play"></i></div>
-              <div class="video-placeholder-label">Transfer 3</div>
-              <div class="video-placeholder-sub">ManiSkill task</div>
-            </div>
+            <figure class="anchor-video">
+              <video
+                class="gap-autoplay-video"
+                playsinline
+                muted
+                loop
+                preload="auto"
+                aria-label="GAP transfer 1: RoboMimic task"
+                src="/paper_pages/gap/static/video/task1.mp4"
+              ></video>
+              <figcaption class="anchor-video-caption">
+                <div class="anchor-video-label">Transfer 1</div>
+                <div class="anchor-video-sub">RoboMimic task</div>
+              </figcaption>
+            </figure>
+            <figure class="anchor-video">
+              <video
+                class="gap-autoplay-video"
+                playsinline
+                muted
+                loop
+                preload="auto"
+                aria-label="GAP transfer 2: RoboMimic task"
+                src="/paper_pages/gap/static/video/task2.mp4"
+              ></video>
+              <figcaption class="anchor-video-caption">
+                <div class="anchor-video-label">Transfer 2</div>
+                <div class="anchor-video-sub">RoboMimic task</div>
+              </figcaption>
+            </figure>
+            <figure class="anchor-video">
+              <video
+                class="gap-autoplay-video"
+                playsinline
+                muted
+                loop
+                preload="auto"
+                aria-label="GAP transfer 3: ManiSkill task"
+                src="/paper_pages/gap/static/video/task3.mp4"
+              ></video>
+              <figcaption class="anchor-video-caption">
+                <div class="anchor-video-label">Transfer 3</div>
+                <div class="anchor-video-sub">ManiSkill task</div>
+              </figcaption>
+            </figure>
           </div>
         </div>
-
+        <!--
         <figure class="paper-figure">
           <img src="/paper_pages/gap/static/images/qualitative_hq.png" alt="Qualitative keypoint transfer across tasks and simulators" />
           <figcaption class="paper-figure-caption">
@@ -315,6 +358,7 @@ permalink: /gap/
             Third-person and wrist-camera views shown.
           </figcaption>
         </figure>
+        -->
       </div>
     </section>
 

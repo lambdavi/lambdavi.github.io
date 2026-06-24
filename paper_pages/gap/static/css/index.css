@@ -290,6 +290,39 @@ body {
   min-width: 0;
 }
 
+.anchor-video {
+  margin: 0;
+  min-width: 0;
+}
+
+.anchor-video video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: var(--gap-shadow);
+  background: #0f172a;
+}
+
+.anchor-video-caption {
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+.anchor-video-label {
+  font-family: "Google Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.anchor-video-sub {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.15rem;
+}
+
 @media (max-width: 900px) {
   .anchor-videos-layout {
     grid-template-columns: 1fr;
