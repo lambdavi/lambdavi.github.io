@@ -447,6 +447,32 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.gap-results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.gap-task-table-wrap {
+  min-width: 0;
+  border-radius: 12px;
+  box-shadow: var(--gap-shadow);
+  overflow: hidden;
+  background: #fff;
+}
+
+.gap-task-title {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-family: "Google Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--gap-primary-light);
+  text-align: center;
+}
+
 .gap-table {
   width: 100%;
   table-layout: fixed;
@@ -454,6 +480,10 @@ body {
   font-size: 0.82rem;
   font-family: "Google Sans", sans-serif;
   background: #fff;
+}
+
+.gap-table--task {
+  table-layout: auto;
 }
 
 .gap-table .gap-col-method {
@@ -470,6 +500,11 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e7eb;
   white-space: nowrap;
+}
+
+.gap-table--task th,
+.gap-table--task td {
+  padding: 0.5rem 0.45rem;
 }
 
 .gap-table th {
@@ -495,6 +530,12 @@ body {
   background: #fff;
   z-index: 1;
   min-width: 130px;
+}
+
+.gap-table--task td:first-child,
+.gap-table--task th:first-child {
+  position: static;
+  min-width: 7.5rem;
 }
 
 .gap-table thead th:first-child {
@@ -527,6 +568,36 @@ body {
 
 .gap-table .domain-shift td:first-child {
   background: #f3f4f6;
+}
+
+.gap-table--domain-shift tbody td:not(:first-child) {
+  background: #f3f4f6;
+}
+
+.gap-table--domain-shift tr.gap-row td:not(:first-child) {
+  background: #e8f4f3;
+}
+
+@media (max-width: 768px) {
+  .gap-results-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .gap-table--task {
+    font-size: 0.78rem;
+  }
+
+  .gap-table--task th,
+  .gap-table--task td {
+    padding: 0.45rem 0.35rem;
+  }
+
+  .gap-table--task td:first-child,
+  .gap-table--task th:first-child {
+    min-width: 6.5rem;
+    white-space: normal;
+  }
 }
 
 .gap-table-caption {
