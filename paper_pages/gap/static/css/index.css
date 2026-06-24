@@ -251,8 +251,12 @@ body {
   font-size: 0.75rem;
 }
 
-/* ── Hero / project video ── */
-.hero-video {
+/* ── Hero / project video (avoid Bulma's .hero-video styles) ── */
+.project-video-section .container.is-max-desktop {
+  width: 100%;
+}
+
+.project-video {
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -263,7 +267,7 @@ body {
   background: #0f172a;
 }
 
-.hero-video video {
+.project-video video {
   width: 100%;
   max-width: 100%;
   height: auto;
