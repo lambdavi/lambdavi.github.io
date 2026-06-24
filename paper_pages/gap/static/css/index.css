@@ -253,16 +253,20 @@ body {
 
 /* ── Hero / project video ── */
 .hero-video {
+  position: relative;
   width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--gap-shadow);
+  background: #0f172a;
 }
 
 .hero-video video {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: contain;
   border-radius: 14px;
 }
 
