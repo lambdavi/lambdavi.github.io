@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <title>Davide Buoso</title>
+    <meta
+      name="description"
+      content="Davide Buoso is a PhD student at VANDAL, Polytechnic University of Turin, working on imitation learning, generative models, and perception for robots."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=portrait1" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231c1915'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia' font-size='13' fill='%23f3efe6'%3EDB%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+
+    <header class="top">
+      <div class="wrap top-inner">
+        <a class="wordmark" href="#top">Davide Buoso</a>
+        <div class="nav-tools">
+          <nav aria-label="Page">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#news">News</a>
+            <a href="#publications">Publications</a>
+            <a href="#teaching">Teaching</a>
+          </nav>
+          <button type="button" class="theme" id="theme-toggle">Dark</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="intro wrap" id="about">
+        <div class="intro-row">
+        <div class="intro-copy">
+          <p class="kicker">Polytechnic University of Turin</p>
+          <h1 id="top">Davide Buoso</h1>
+          <p class="role">PhD student, VANDAL</p>
+          <p>
+            <span class="portrait"><img src="assets/portrait.jpg" alt="Davide Buoso" /></span>
+            I am from Turin. I graduated cum laude in Data Science and Engineering at the
+            <a href="https://www.polito.it/">Polytechnic University of Turin</a>.
+            I was a visiting student at the
+            <a href="https://www.ox.ac.uk/">University of Oxford</a>, working with the
+            <a href="https://torrvision.com/index.html">Torr Vision Group</a>
+            under Tim Franzmeyer and Philip Torr, in collaboration with the
+            <a href="https://ori.ox.ac.uk/">Oxford Robotics Institute</a>
+            and Daniele De Martini.
+          </p>
+          <p>
+            I am now a PhD student at
+            <a href="https://vandal.polito.it/">VANDAL</a>, Polytechnic University of Turin,
+            where I am lucky to be supervised by <a href="https://www.giuseppeaverta.me">Prof. Giuseppe Averta</a>.
+          </p>
+          <ul class="contact">
+            <li>
+              <a href="mailto:davide.buoso@polito.it" aria-label="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4.5 7.2 12 12.4l7.5-5.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/lambdavi" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.6s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.6 3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/BuosoDavide" aria-label="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.7 10.4 21.4 3h-1.6l-5.8 6.4L9.3 3H3.4l7 9.9L3.4 21h1.6l6.1-6.8L14.7 21h5.9l-7.3-10.6Zm-2.2 2.4-.7-1-5.6-7.8h2.4l4.5 6.3.7 1 5.9 8.2h-2.4l-4.8-6.7Z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="news-slot">
+        <section id="news">
+            <h2>News</h2>
+            <div class="news-scroll">
+              <ol class="news">
+                <li>
+                  <time datetime="2026-10">Oct 2026</time>
+                  <p>Attended IROS 2026 in Pittsburgh.</p>
+                </li>
+                <li>
+                  <time datetime="2026-07">Jul 2026</time>
+                  <p>Attended the International Computer Vision Summer School (ICVSS).</p>
+                </li>
+                <li>
+                  <time datetime="2026-06">Jun 2026</time>
+                  <p>Attended ICRA 2026.</p>
+                </li>
+                <li>
+                  <time datetime="2025-04">Apr–Nov 2025</time>
+                  <p>Participated in the Venice Biennale and presented the Robotic Bartender project with researchers from Daniela Rus’s group.</p>
+                </li>
+                <li>
+                  <time datetime="2024-09">Sep 2024</time>
+                  <p>Started a PhD at VANDAL, Polytechnic University of Turin.</p>
+                </li>
+                <li>
+                  <time datetime="2024-08">Aug 2024</time>
+                  <p>Finished a visiting stay with the Torr Vision Group and the Oxford Robotics Institute.</p>
+                </li>
+                <li>
+                  <time datetime="2024-03">Mar 2024</time>
+                  <p>Joined the Torr Vision Group and the Oxford Robotics Institute as a visiting student.</p>
+                </li>
+              </ol>
+            </div>
+          </section>
+        </div>
+        </div>
+        <section id="research">
+          <h2>Research</h2>
+          <ol class="topics">
+            <li>
+              <h3>Imitation learning for manipulation</h3>
+              <p>Acquisition and aggregation of skills for autonomous robots.</p>
+            </li>
+            <li>
+              <h3>Generative models for robots</h3>
+              <p>Language, vision-language, and diffusion models for perception, planning, and reasoning.</p>
+            </li>
+            <li>
+              <h3>Efficient perception</h3>
+              <p>Representations that stay useful when data and compute are limited.</p>
+            </li>
+          </ol>
+        </section>
+      </section>
+
+      <section class="wrap block" id="publications">
+        <h2>Publications</h2>
+        <ol class="papers">
+          <li>
+            <figure><a href="https://andreaprotopapa.github.io/graph-reward-learning/"><img class="thumb" src="assets/papers/gordon.png" alt="GORDON project page" /></a></figure>
+            <div>
+              <p class="year">2026</p>
+              <h3>GORDON: Graph-based Object-centric Rewards for Decomposition of Long-Horizon Manipulation</h3>
+              <p class="authors">Andrea Protopapa, <strong>Davide Buoso</strong>, Francesca Pistilli, Georgia Chalvatzaki, Giuseppe Averta</p>
+              <p class="venue">arXiv, under review</p>
+              <p class="summary">
+                Object-centric graph rewards learned from action-free videos, used to split long-horizon manipulation into subtasks without manual segmentation.
+              </p>
+              <p class="links">
+                <a href="https://arxiv.org/abs/2608.03753">arXiv</a>
+                <a href="https://arxiv.org/pdf/2608.03753">PDF</a>
+                <a href="https://andreaprotopapa.github.io/graph-reward-learning/">Project page</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <figure><a href="https://lambdavi.github.io/gap/"><img class="thumb" src="assets/papers/gap.png" alt="GAP project page" /></a></figure>
+            <div>
+              <p class="year">2026</p>
+              <h3>GAP: Geometric Anchor Pre-Training for Data-Efficient Visuomotor Learning of Manipulation Tasks</h3>
+              <p class="authors"><strong>Davide Buoso</strong>, Andrea Protopapa, Stefano Di Carlo, Francesca Pistilli, Giuseppe Averta</p>
+              <p class="venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</p>
+              <p class="summary">
+                A short, action-free warm-up that teaches a spatial adapter to lock onto object geometry, so a frozen vision model can learn manipulation from very few demonstrations.
+              </p>
+              <p class="links"><a href="https://lambdavi.github.io/gap/">Project page</a></p>
+            </div>
+          </li>
+          <li>
+            <figure><a href="https://lambdavi.github.io/select2plan/"><img class="thumb" src="assets/papers/s2p.png" alt="Select2Plan project page" /></a></figure>
+            <div>
+              <p class="year">2025</p>
+              <h3>Select2Plan: Training-Free ICL-Based Planning through VQA and Memory Retrieval</h3>
+              <p class="authors"><strong>Davide Buoso</strong>, Luke Robinson, Giuseppe Averta, Philip Torr, Tim Franzmeyer, Daniele De Martini</p>
+              <p class="venue">IEEE Robotics and Automation Letters (RA-L)</p>
+              <p class="summary">
+                High-level robot planning with an off-the-shelf vision-language model, structured visual questions, and a handful of in-context examples. No task-specific fine-tuning.
+              </p>
+              <p class="links">
+                <a href="https://lambdavi.github.io/select2plan/">Project page</a>
+                <a href="https://arxiv.org/pdf/2411.04006">PDF</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <figure><a href="https://hdl.handle.net/11583/2987737"><img class="thumb" src="assets/papers/aruco.png" alt="ArUco markers record" /></a></figure>
+            <div>
+              <p class="year">2024</p>
+              <h3>Enhanced Localization of ArUco Markers for Autonomous Robotics: A Comparative Study</h3>
+              <p class="authors">Alessandro Minervini, <strong>Davide Buoso</strong>, Jean Carlos Quito Casas, Davide Fassio, Claudio Giuseppe Messina, Francesco Marino, Giorgio Guglieri</p>
+              <p class="venue">European Robotics Forum (ERF)</p>
+              <p class="links"><a href="https://hdl.handle.net/11583/2987737">Record</a></p>
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="subhead">Course projects</h3>
+        <ol class="papers minor">
+          <li>
+            <figure><a href="https://github.com/lambdavi/SpanLuke"><img class="thumb" src="assets/papers/spanluke.png" alt="SpanLuke code" /></a></figure>
+            <div>
+              <p class="year">2024</p>
+              <h3>SpanLuke: Enhancing Legal NER using SpanMarker and LoRA</h3>
+              <p class="authors"><strong>Davide Buoso</strong>, Enrico Capuano, Andrea Caselli, Destiny Okpekpe</p>
+              <p class="links">
+                <a href="https://github.com/lambdavi/SpanLuke">Code</a>
+                <a href="https://github.com/lambdavi/SpanLuke/blob/main/media/Group12_DNLP.pdf">PDF</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <figure><a href="https://github.com/lambdavi/SatDrive-SegFL"><img class="thumb" src="assets/papers/fed.png" alt="Federated learning code" /></a></figure>
+            <div>
+              <p class="year">2023</p>
+              <h3>Exploring Federated Learning for Semantic Segmentation in Autonomous Driving and Satellite Images</h3>
+              <p class="authors"><strong>Davide Buoso</strong>, Marco Castiglia, Giacomo Zuliani</p>
+              <p class="links">
+                <a href="https://github.com/lambdavi/SatDrive-SegFL">Code</a>
+                <a href="https://github.com/lambdavi/SatDrive-SegFL/blob/main/paper.pdf">PDF</a>
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="wrap block" id="teaching">
+        <h2>Teaching activities</h2>
+        <p class="lede">Teaching collaborator at Polytechnic University of Turin.</p>
+        <ol class="news">
+          <li>
+            <time datetime="2025">2025–Current</time>
+            <p><a href="https://josephav.github.io/robot_learning_course/">Robot Learning</a>, MSc Computer Engineering.</p>
+          </li>
+          <li>
+            <time datetime="2024">2024–2026</time>
+            <p>Programming Techniques, BSc Management Engineering.</p>
+          </li>
+          <li>
+            <time datetime="2025">2025–2026</time>
+            <p>Fundamentals of Artificial Intelligence, Machine and Deep Learning, MSc Data Science and Engineering.</p>
+          </li>
+          <li>
+            <time datetime="2024">2024–2025</time>
+            <p>Machine Learning and Deep Learning, MSc Data Science and Engineering.</p>
+          </li>
+          <li>
+            <time datetime="2024">2024–2025</time>
+            <p>Machine Learning for Mathematical Engineering, MSc Mathematical Engineering.</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var button = document.getElementById("theme-toggle");
+        function apply(theme) {
+          document.documentElement.setAttribute("data-theme", theme);
+          var dark = theme === "dark";
+          button.textContent = dark ? "Light" : "Dark";
+          button.setAttribute("aria-pressed", dark ? "true" : "false");
+          button.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+        }
+        apply(document.documentElement.getAttribute("data-theme") || "light");
+        button.addEventListener("click", function () {
+          var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          localStorage.setItem("theme", next);
+          apply(next);
+        });
+      })();
+    </script>
+    <footer class="wrap">
+      <p>Davide Buoso · Turin</p>
+      <ul class="contact">
+        <li>
+          <a href="mailto:davide.buoso@polito.it" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4.5 7.2 12 12.4l7.5-5.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/lambdavi" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.6s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.6 3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/BuosoDavide" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.7 10.4 21.4 3h-1.6l-5.8 6.4L9.3 3H3.4l7 9.9L3.4 21h1.6l6.1-6.8L14.7 21h5.9l-7.3-10.6Zm-2.2 2.4-.7-1-5.6-7.8h2.4l4.5 6.3.7 1 5.9 8.2h-2.4l-4.8-6.7Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
